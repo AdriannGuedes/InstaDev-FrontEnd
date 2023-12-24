@@ -10,6 +10,7 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "vue"
+    "vue",
+    "html"
   ]
 }
