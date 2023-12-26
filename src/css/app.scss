@@ -1,1 +1,9 @@
-// app global css in SCSS form
+.link {
+  text-decoration: none;
+  color: $instablue;
+}
+
+.text-opacity {
+  color: #000;
+  opacity: 0.4;
+}
