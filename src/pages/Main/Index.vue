@@ -1,13 +1,13 @@
 <template>
   <q-page class="flex">
-    <div class="container-top full-width absolute-top q-mt-lg">
+    <div class="container-top full-width q-pt-lg">
       <TopBar class="q-mb-md"/>
       <q-separator class="full-width q-mt-sm"/>
     </div>
     <q-scroll-area
      horizontal
      :visible="false"
-      class=" primary scroll-area full-width"
+      class=" primary scroll-area full-width q-px-sm"
     >
      <div class="row no-wrap">
       <div class="full-width" v-for="item in 10" :key="item">
@@ -20,9 +20,9 @@
 
       </div>
     </div>
-
-    </q-scroll-area>
-    <div class="container-bottom full-width absolute-bottom q-mb-lg">
+   </q-scroll-area>
+    <Posts v-for="item in 10" :key="item"/>
+    <div class="container-bottom full-width q-pb-lg">
       <q-separator class="full-width q-mb-sm"/>
       <BottomBar/>
     </div>
@@ -32,12 +32,14 @@
 <script>
 import TopBar from 'src/components/TopBar/Index.vue';
 import BottomBar from 'src/components/BottomBar/Index.vue';
+import Posts from 'src/components/Posts/Index.vue';
 
 export default {
   name: 'MainPage',
   components: {
     TopBar,
     BottomBar,
+    Posts,
   },
 };
 </script>
@@ -50,9 +52,19 @@ export default {
 
 .container-bottom {
   background-color: #fafafa;
+  position: fixed;
+  bottom: 0;
+}
+
+.container-top {
+  z-index: 6000;
+  position: fixed;
+  top: 0;
+  background-color: #fafafa;
 }
 
 .q-avatar {
+  z-index: 6000;
   display: flex;
   align-items: center;
   justify-content: center;
