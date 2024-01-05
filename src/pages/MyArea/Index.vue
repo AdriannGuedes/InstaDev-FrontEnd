@@ -88,10 +88,16 @@
 
       </div>
     </div>
+    <div class="container-bottom full-width q-pb-lg">
+      <q-separator class="full-width q-mb-sm"/>
+      <BottomBar/>
+    </div>
   </q-page>
 </template>
 
 <script>
+
+import BottomBar from 'src/components/BottomBar/Index.vue';
 
 export default {
   name: 'MyArea',
@@ -99,6 +105,9 @@ export default {
     return {
       tab: 'grid',
     };
+  },
+  components: {
+    BottomBar,
   },
 };
 </script>

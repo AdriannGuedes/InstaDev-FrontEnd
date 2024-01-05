@@ -50,12 +50,6 @@ export default {
   margin-top: 80px;
 }
 
-.container-bottom {
-  background-color: #fafafa;
-  position: fixed;
-  bottom: 0;
-}
-
 .container-top {
   z-index: 6000;
   position: fixed;
